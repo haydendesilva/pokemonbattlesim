@@ -1,5 +1,5 @@
 # pokemonbattlesim
-A text based simulator game based on Nintendo's Game Franchise Pokemon and Linux text-based games such as "Trek"
+A Python coded, "battle-simulator" game based on the Pokémon game franchise and text-based Linux games such as "Trek"
 
 Instructions:
 
