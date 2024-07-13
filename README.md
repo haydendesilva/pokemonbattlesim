@@ -20,22 +20,25 @@ When menu menu pops up, only input from these options given:
 
 Pokemon:
 - Red (User):
-  - Charmander -> Moves: Scratch, Growl
-  - Bulbasaur -> Moves: Tackle, Growl
+  - Charmander
+    Moves: Scratch, Growl
+  - Bulbasaur
+    Moves: Tackle, Growl
 - Blue (Opponent):
-  - Squirtle -> Moves: Tackle, Tail Whip
+  - Squirtle
+    Moves: Tackle, Tail Whip
 
 Moves:
-- Scratch -> Lowers opponents HP based on calculations
-- Tackle -> Lowers opponents HP based on calculations
-- Growl -> Lowers opponents defense stat
-- Tail Whip -> Lowers opponents attack stat
+- Scratch: Lowers opponents HP based on calculations
+- Tackle: Lowers opponents HP based on calculations
+- Growl: Lowers opponents defense stat
+- Tail Whip: Lowers opponents attack stat
 
 Things to take note:
-- Please do not enter any input except the ones stated above, the data validation for the program has not been finished yet and it will definetly break if you enter something you're not supposed to >.<
+- Please do not enter any input except the ones stated above, the data validation for the program has not been finished yet and it will definetly break if you enter something you're not supposed to
 
 WIP Information:
-- I'm want to work on a new "combat update" that should make it easier to create and edit moves as compared to the current state of the program, hopefully I'll be able to finish it soon
-- Super Effective is currently inactive in the program's current state, I will add it alongside the combat update above
+- I'm currently work on a new "combat update" that should make it easier to create and edit moves as compared to the current state of the program, hopefully I'll be able to finish it soon
+- Super Effective is currently disabled in the program's current state, I'm hoping to add it alongside the combat update above
 
 Thank you and I hope you enjoy this game of mine! :D
