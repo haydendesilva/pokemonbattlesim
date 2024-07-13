@@ -2,7 +2,6 @@
 A Python coded, "battle-simulator" game based on the Pokémon game franchise and text-based Linux games such as "Trek"
 
 Instructions:
-
 1. When you first boot up the game, press "Enter" to proceed to next lines of dialogue
 2. Once you reach the main menu, choose which sub-menu you want to enter using different integer inputs (1, 2, 3, 4)
 3. From the sub-menu, proceed to use different integer inputs to perform an action
@@ -20,13 +19,10 @@ When menu menu pops up, only input from these options given:
 
 Pokemon:
 - Red (User):
-  - Charmander
-    Moves: Scratch, Growl
-  - Bulbasaur
-    Moves: Tackle, Growl
+  - Charmander, Moves: Scratch, Growl
+  - Bulbasaur, Moves: Tackle, Growl
 - Blue (Opponent):
-  - Squirtle
-    Moves: Tackle, Tail Whip
+  - Squirtle, Moves: Tackle, Tail Whip
 
 Moves:
 - Scratch: Lowers opponents HP based on calculations
