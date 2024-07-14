@@ -35,6 +35,6 @@ Things to take note:
 
 WIP Information:
 - I'm currently work on a new "combat update" that should make it easier to create and edit moves as compared to the current state of the program, hopefully I'll be able to finish it soon
-- Super Effective is currently disabled in the program's current state, I'm hoping to add it alongside the combat update above
+- Super Effective is disabled in the program's current state, I'm hoping to add it alongside the combat update above
 
 Thank you and I hope you enjoy this game of mine! :D
