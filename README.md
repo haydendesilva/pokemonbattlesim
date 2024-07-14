@@ -5,7 +5,7 @@ Instructions:
 1. When you first boot up the game, press "Enter" to proceed to next lines of dialogue
 2. Once you reach the main menu, choose which sub-menu you want to enter using different integer inputs (1, 2, 3, 4)
 3. From the sub-menu, proceed to use different integer inputs to perform an action
-4. Your opponent will commence with their move after you finished with your action
+4. Your opponent will commence with their action after you finished with your action
 5. The cycle will continue looping until every pokemon on one team all have 0 HP
 
 When menu menu pops up, only input from these options given:
