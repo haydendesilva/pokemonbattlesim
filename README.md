@@ -31,10 +31,10 @@ Moves:
 - Tail Whip: Lowers opponents attack stat
 
 Things to take note:
-- Please do not enter any input except the ones stated above, the data validation for the program has not been finished yet and it will definetly break if you enter something you're not supposed to
+- Please do not enter any input except the ones stated above, the data validation for the program has not been finished yet and it will definetly break if you enter something you're not supposed to.
 
 WIP Information:
-- I'm currently work on a new "combat update" that should make it easier to create and edit moves as compared to the current state of the program, hopefully I'll be able to finish it soon
-- Super Effective is disabled in the program's current state, I'm hoping to add it alongside the combat update above
+- I'm currently work on a new "combat update" that should make it easier to create and edit moves as compared to the current state of the program, hopefully I'll be able to finish it soon.
+- Super Effective is disabled in the program's current state, I'm hoping to add it alongside the combat update above.
 
 Thank you and I hope you enjoy this game of mine! :D
