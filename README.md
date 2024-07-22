@@ -32,7 +32,7 @@ Moves:
 
 Things to take note:
 - Please do not enter any input except the ones stated above, the data validation for the program has not been finished yet and it will definetly break if you enter something you're not supposed to.
-- There seems to be a bug with how the game registers the Pokemon's HP and is giving the opponent another turn when they're supposed to be fainted. Will be patched soon.
+- There seems to be a bug with how the game registers the Pokemon's HP and is giving the opponent another turn when they're supposed to be fainted (Patched)
 
 WIP Information:
 - I'm currently work on a new "combat update" that should make it easier to create and edit moves as compared to the current state of the program, hopefully I'll be able to finish it soon.
