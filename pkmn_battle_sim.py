@@ -43,7 +43,7 @@ def move_type(n, plr1_pkmn_list, plr2_pkmn_list, crit_con, sp_eff_con, fail_con,
         dmg = 0
         ##to skip any effects of move usage
     elif plr1_pkmn_list[plr1_num][8 + n][8] == "Physical":   ##detect if move causes dmg or status eff
-        usr_atk = (2 * plr1_pkmn_list[plr1_num][6] + 10) * plr1_pkmn_list[plr1_num][12] * plr1_pkmn_list[plr1_num][8 + n][1]
+        usr_atk = (3 * plr1_pkmn_list[plr1_num][6] + 10) * plr1_pkmn_list[plr1_num][12] * plr1_pkmn_list[plr1_num][8 + n][1]
         opp_def = 250 * plr2_pkmn_list[plr2_num][13]
 ##      sp_eff =
         ##sp_eff function to be created ltr
@@ -66,7 +66,7 @@ def move_type(n, plr1_pkmn_list, plr2_pkmn_list, crit_con, sp_eff_con, fail_con,
 
 def move_result(n, plr1_pkmn, plr2_pkmn, plr1_pkmn_pp, plr2_pkmn_pp, plr2_pkmn_hp, plr1_num, plr2_num, plr_title, u_1, u_2):
     if plr1_pkmn[plr1_num][8 + n][8] == "Physical":  ##detect if move causes dmg or status eff
-        plr1_pkmn_pp[plr1_num][i] -= 1
+        plr1_pkmn_pp[plr1_num][n] -= 1
         if random.randint(1, 256) == 93:
             fail_bool = True
         else:
@@ -76,7 +76,7 @@ def move_result(n, plr1_pkmn, plr2_pkmn, plr1_pkmn_pp, plr2_pkmn_pp, plr2_pkmn_h
             crit_bool = True
         else:
             crit_bool = False
-        ##run a randnum to see if fail is true
+        ##run a randnum to see if crit is true
         sp_eff_bool = False  ##temp false since no sp_eff moves
         move_dmg = move_type(n, plr1_pkmn, plr2_pkmn, crit_bool, sp_eff_bool, fail_bool, plr1_num, plr2_num)
         plr2_pkmn_hp[plr2_num] -= move_dmg  ##minus dmg fro opp hp
@@ -198,7 +198,7 @@ while turn_loop == True:
         u1_num = 0
         u2_num = 1
         if fight_input == "0":
-            turn_loop = True
+            pass
             ##to skip other functions and return to main menu (does not allow opp to atk)
         if fight_input == "1":  ##move 1
             i = 0
@@ -208,6 +208,22 @@ while turn_loop == True:
             tr_num = 1
             move_result(i, red_pkmn, blue_pkmn, red_pkmn_pp, blue_pkmn_pp, blue_pkmn_hp, red_num, blue_num, title, u1_num, u2_num)
 
+        if blue_pkmn_hp[blue_num] <= 0:
+            blue_pkmn_hp[blue_num] = 0
+            plr_hp(red_pkmn, blue_pkmn, red_pkmn_lv, blue_pkmn_lv, red_pkmn_hp, blue_pkmn_hp, red_num, blue_num)
+            for i in range(len(blue_pkmn_hp)):
+                if blue_pkmn_hp[i] > 0:
+                    input("\n Enemy" + blue_pkmn[blue_num][0] + " fainted!")
+                    red_num = i
+                    input("Blue sent out " + blue_pkmn[blue_num][0] + "!")
+                    break
+                    ##auto swap out sys for fainted pkmn
+
+        if blue_pkmn_hp[blue_num] <= 0:
+            red_lose = False
+            turn_loop = False
+            break
+        
     elif menu_input == "2":  ##pkmn menu
         print("\nChoose a Pokémon.")
         for i in range(6):
@@ -230,7 +246,10 @@ while turn_loop == True:
             ##checks if chosen pkmn hp is 0 and sends appropriate msg if true
             red_num = prev_num
             ##keeps pkmn the same
+        elif prev_num == red_num:
+            fight_input = "0"
         elif prev_num != red_num:
+            fight_input = "1"
             red_num = pkmn_input - 1
             ##changes the pkmn num
             input("\n" + red_pkmn[prev_num][0] + " come back!")
@@ -272,34 +291,15 @@ while turn_loop == True:
                 input("\n" + red_pkmn[red_num][0] + " fainted!")
                 red_num = i
                 input("Go! " + red_pkmn[red_num][0] + "!")
+                break
                 ##auto swap out sys for fainted pkmn
 
-        if red_pkmn_hp[red_num] <= 0:
-            red_lose = True
-            turn_loop = False
-            
-        elif blue_pkmn_hp[blue_num] <= 0:
-            turn_loop = False
+    if red_pkmn_hp[red_num] <= 0:
+        red_lose = True
+        turn_loop = False
+        break
         ##checks if usr lost or won based on all pkmn hp (red_pkmn_hp)
 
-    elif blue_pkmn_hp[blue_num] <= 0:
-        blue_pkmn_hp[blue_num] = 0
-        plr_hp(red_pkmn, blue_pkmn, red_pkmn_lv, blue_pkmn_lv, red_pkmn_hp, blue_pkmn_hp, red_num, blue_num)
-        for i in range(len(blue_pkmn_hp)):
-            if blue_pkmn_hp[i] > 0:
-                input("\n Enemy" + blue_pkmn[blue_num][0] + " fainted!")
-                red_num = i
-                input("Blue sent out " + blue_pkmn[blue_num][0] + "!")
-                ##auto swap out sys for fainted pkmn
-
-        if red_pkmn_hp[red_num] <= 0:
-            red_lose = True
-            turn_loop = False
-            
-        elif blue_pkmn_hp[blue_num] <= 0:
-            turn_loop = False
-        ##checks if usr lost or won based on all pkmn hp (red_pkmn_hp)
-            
 if red_lose == False:
     input("\nEnemy " + blue_pkmn[blue_num][0] + " fainted!")
     input("Red defeated Blue!")
