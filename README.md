@@ -14,6 +14,7 @@ When menu menu pops up, only input from these options given:
   (Move Menu allows you to use your pokemon's moves such as Scratch or Tail Whip)
 - Pokemon Menu: 1, 2, 0
   (Allows you to swap out you pokemon)
+
 (The "0" input for both the Move Menu and Pokemon Menu returns you to the main menu)
 
 
